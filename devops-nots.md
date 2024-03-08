@@ -72,6 +72,12 @@ $ docker logs -f looper
   Thu Mar  1 15:51:31 UTC 2023
 ```
 
+* The public key can be moved to the remote server with the command `scp` for example, which allows copying  files between two distinct systems (cp was for copying inside the local system). 
+The command is used in the following way:
+
+`scp path/to/copyable/file user@palvelmen.osoite:path/to/target/folder`
+* Notice the colon between the remote server’s address and the target path!
+
 
 
 
