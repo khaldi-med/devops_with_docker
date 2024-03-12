@@ -25,12 +25,14 @@
 ```
 docker run -it ubuntu
 
--i (interactive), -t (tty), and -d (detached)
+-i (interactive)
+-t (tty)
 ```
 
 * The public key can be moved to the remote server with the command `scp` for example, which allows copying files between two distinct systems (cp was for copying inside the local system). 
 
-`scp path/to/copyable/file user@palvelmen.osoite:path/to/target/folder`
+	* `scp path/to/copyable/file user@palvelmen.osoite:path/to/target/folder`
+
 * Docker containers were first developed on Linux for Linux.
 
 * Containers are only possible due to the fact that the Linux OS provides some primitives, such as namespaces, control groups, layer capabilities, and more, all of which are leveraged in a very specific way by the container runtime and the Docker engine. Linux kernel namespaces, such as process ID (pid) namespaces or network (net) namespaces, allow Docker to encapsulate or sandbox processes that run inside the container. Control Groups make sure that containers cannot suffer from the noisy-neighbor syndrome, where a single application running in a container can consume most or all of the available resources of the whole Docker host. Control Groups allow Docker to limit the resources, such as CPU time or the amount of RAM, that each container is allocated.
