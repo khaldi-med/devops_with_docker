@@ -75,12 +75,15 @@ $ docker logs -f looper
 * The public key can be moved to the remote server with the command `scp` for example, which allows copying  files between two distinct systems (cp was for copying inside the local system). 
 The command is used in the following way:
 
-`scp path/to/copyable/file user@palvelmen.osoite:path/to/target/folder`
+* `scp path/to/copyable/file user@palvelmen.osoite:path/to/target/folder`
 * Notice the colon between the remote server’s address and the target path!
+* Docker containers were first developed on Linux for Linux.
+* Containers are only possible due to the fact that the Linux OS provides some primitives, such as namespaces, control groups, layer capabilities, and more, all of which are leveraged in a very specific way by the container runtime and the Docker engine. Linux kernel namespaces, such as process ID (pid) namespaces or network (net) namespaces, allow Docker to encapsulate or sandbox processes that run inside the container. Control Groups make sure that containers cannot suffer from the noisy-neighbor syndrome, where a single application running in a container can consume most or all of the available resources of the whole Docker host. Control Groups allow Docker to limit the resources, such as CPU time or the amount of RAM, that each container is allocated.
 
+* Due to the fact that container images are immutable, it is easy to have them scanned for common vulnerabilities and exposures (CVEs), and in doing so, increase the overall security of our applications.
+Another way to make our software supply chain more secure is to have our containers use a content trust. A content trust basically ensures that the author of a container image is who they pretend to be and that the consumer of the container image has a guarantee that the image has not been tampered with in transit. The latter is known as a man-in-the-middle (MITM) attack.
 
-
-
+* 
 
 
 
