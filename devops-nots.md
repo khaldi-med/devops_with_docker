@@ -16,9 +16,9 @@
 
 * If you have hundreds of stopped containers and you wish to delete them all, you should use: `docker container prune`.
 
-* You can also use the image pull command to download images without running them: "docker image pull hello-world".
+* You can also use the image pull command to download images without running them: `docker image pull hello-world`.
 
-* We should first stop the container using "docker container stop 'image'", and then use "rm".
+* We should first stop the container using "docker container stop <image>", and then use "rm".
 
 * We can use "docker container rm --force <iamgename>".
 
