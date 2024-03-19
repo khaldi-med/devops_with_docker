@@ -41,13 +41,19 @@ docker run -it ubuntu
 
 * Another way to make our software supply chain more secure is to have our containers use a content trust. A content trust basically ensures that the author of a container image is who they pretend to be and that the consumer of the container image has a guarantee that the image has not been tampered with in transit. The latter is known as a man-in-the-middle (MITM) attack.
 
-* 
+```
+docker kill
+docker rm 
+docker rm --force <container>
+```
+* start process with -it and add --rm in order to remove it automatically after it has exited. 
 
+* The --rm ensures that there are no garbage containers left behind.
 
+* `docker search <image>` By default, docker search will only search from Docker Hub, but to a search different registry, you can add the registry address before the search term, for example, `docker search quay.io/hello`
 
-
-
-
+* `docker diff`
+* `docker build . -t <name>`
 
 
 
