@@ -54,7 +54,8 @@ docker rm --force <container>
 
 * `docker diff`
 * `docker build . -t <name>`
-
+* `docker container ls -a --last 3`
+* 
 
 
 
